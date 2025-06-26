@@ -31,32 +31,8 @@
 
 ### Microservices Architecture
 
-```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Frontend      │    │   API Gateway   │    │   Load Balancer │
-│   (React.js)    │◄──►│   (FastAPI)     │◄──►│   (Nginx)       │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-                                │
-                ┌───────────────┼───────────────┐
-                │               │               │
-        ┌───────▼──────┐ ┌──────▼──────┐ ┌─────▼──────┐
-        │ Auth Service │ │ User Service│ │Cart Service│
-        │  (FastAPI)   │ │  (FastAPI)  │ │ (FastAPI)  │
-        └──────────────┘ └─────────────┘ └────────────┘
-                │               │               │
-                └───────────────┼───────────────┘
-                                │
-                        ┌───────▼──────┐
-                        │ Voucher      │
-                        │ Service      │
-                        │ (FastAPI)    │
-                        └──────────────┘
-                                │
-                        ┌───────▼──────┐
-                        │   MongoDB    │
-                        │   Atlas      │
-                        └──────────────┘
-```
+![Pipeline Diagram](images/pipeline.jpg)
+
 
 ### 🔧 Tech Stack
 
@@ -65,7 +41,6 @@
 - **Database:** MongoDB Atlas
 - **Authentication:** JWT (JSON Web Tokens)
 - **Authorization:** RBAC (Role-Based Access Control)
-- **Message Queue:** RabbitMQ
 - **Containerization:** Docker
 
 #### Frontend
@@ -277,37 +252,11 @@ RATE_LIMIT_PER_MINUTE=100
 
 ---
 
-## 🤝 Contributing
-
-### Development Workflow
-1. Fork repository
-2. Tạo feature branch
-3. Implement security measures
-4. Write comprehensive tests
-5. Submit pull request
-
-### Security Guidelines
-- **Không commit secrets** vào repository
-- **Validate tất cả inputs**
-- **Implement proper error handling**
-- **Follow OWASP guidelines**
-
 ---
 
 ## 📄 License
 
 Dự án này được phát triển cho mục đích học tập trong môn Mật mã học NT219.P21.ANTN.
-
----
-
-## 📞 Liên hệ
-
-**Sinh viên thực hiện:**
-- **Trần Dương Minh Đại** - 22520183
-- **Hoàng Ngọc Khánh** - 23520717
-
-**Môn học:** Mật mã học NT219.P21.ANTN  
-**Trường:** Đại học Công nghệ Thông tin - ĐHQG-HCM
 
 ---
 
