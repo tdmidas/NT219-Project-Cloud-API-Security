@@ -1,0 +1,267 @@
+
+/* src/styles/home.css */
+.home-page {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.category-section {
+  margin-bottom: 30px;
+}
+
+.category-section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.featured-section {
+  margin-bottom: 30px;
+}
+
+.featured-section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+
+
+.user-joined {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.load-more-btn {
+  background: linear-gradient(90deg, #6A8E5A 0%, #388e3c 100%);
+  color: #fff;
+  border: none;
+  padding: 0.8em 2.2em;
+  border-radius: 2em;
+  font-size: 1.1em;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(56, 142, 60, 0.10);
+  transition: background 0.2s, transform 0.15s;
+  margin: 0 auto;
+  display: inline-block;
+  letter-spacing: 0.5px;
+}
+
+.load-more-btn:hover {
+  background: linear-gradient(90deg, #388e3c 0%, #6A8E5A 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(56, 142, 60, 0.18);
+}
+
+/* banner ảnh chạy*/
+.carousel {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 8px 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.carousel-images img {
+  width: 280px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+  animation: scroll-left 20s linear infinite;
+}
+
+.carousel-images img:hover {
+  transform: scale(1.04);
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+@media (max-width: 600px) {
+  .home-page {
+    padding: 10px;
+  }
+
+  .category-section h2,
+  .featured-section h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .load-more-btn {
+    width: 50%;
+    padding: 1em 0;
+    font-size: 0.8em;
+    border-radius: 1.5em;
+    box-shadow: none;
+  }
+
+  .user-joined {
+    font-size: 14px;
+    margin-top: 15px;
+    padding: 0 10px;
+  }
+
+  .carousel-images img {
+  width: 70px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+  animation: scroll-left 20s linear infinite;
+}
+}
+
+
+
+
+
+
+/*tintuc*/
+/* NewsCard.css */
+.carousel_tt {
+  width: 100%;
+  overflow: auto;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-linear 30s linear infinite; 
+}
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 340px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  margin: 16px 16px 16px 0;
+}
+
+.news-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.news-card .content {
+  padding: 16px;
+}
+
+.news-card h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0 0 8px;
+}
+
+.news-card p {
+  font-size: 0.97rem;
+  color: #444;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .news-card {
+    width: 50vw;
+    margin: 12px 12px 12px 0;
+  }
+
+  .news-card img {
+    height: 70px;
+  }
+
+  .news-card h3 {
+    font-size: 0.7rem;
+  }
+
+  .news-card p {
+    font-size: 0.5rem;
+  }
+
+  .news-card .content {
+    padding: 12px;
+  }
+}
+@keyframes scroll-linear {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.faq-section {
+  padding: 24px;
+  background-color: #f7f7f7;
+}
+
+.faq-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.faq-item {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  background-color: #f0f0f0;
+}
+@media (max-width: 767px) {
+  .faq-item {
+    width: 70%;
+    font-size: 9px;         /* Nhỏ lại so với desktop */
+    padding: 9px 16px;      /* Giảm padding cho nhỏ gọn hơn */
+    margin-left: 0;          /* Đảm bảo không bị lệch */
+  }
+
+  .faq-grid {
+    padding-left: 0;         /* Nếu có padding ở grid */
+  }
+
+  .faq-section {
+    padding-left: 1px;      /* Hoặc bạn có thể giảm padding tổng thể bên trái */
+  }
+}
+

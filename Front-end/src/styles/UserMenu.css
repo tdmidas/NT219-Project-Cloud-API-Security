@@ -1,0 +1,74 @@
+.user-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar {
+  background-color: #d35400;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  z-index: 999;
+  
+}
+.dropdown a.dropdown-item,
+.dropdown p {
+  margin: 0;
+  padding: 6px 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.dropdown a.dropdown-item:hover,
+.dropdown p:hover {
+  background-color: #f2f2f2;
+}
+
+@media (max-width: 480px) {
+  .avatar {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+  }
+  .user-menu {
+    position: relative;
+    display: inline-block;
+    min-width: 20px;   /* Nhỏ hơn nữa */
+    max-width: 30px;   /* Giới hạn tối đa nếu cần */
+    padding: 0;        /* Bỏ padding nếu có */
+   
+  }
+
+  .dropdown {
+    top: 30px;
+    right: -10px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 80px;
+  }
+
+  .dropdown a.dropdown-item,
+  .dropdown p {
+    padding: 3px 3px;
+    font-size: 9px;
+  }
+ 
+  
+}

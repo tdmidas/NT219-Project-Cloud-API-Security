@@ -1,0 +1,95 @@
+.deals-page {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  min-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 20px;
+}
+
+.san-list-container {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  position: fixed;
+  top: 90px;
+  left: 20px;
+  bottom: 100px;
+  background-color: #f4e9e9;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px #111111;
+  box-sizing: border-box;
+}
+
+.main-deals-container {
+  flex: 1;
+  width: 72%;
+  margin-left: 27%;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 3px #111111;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.title-main-deals {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.voucher-grid {
+  position: relative;
+  overflow: visible;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 5px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .deals-page {
+    flex-direction: column;
+    padding: 10px;
+    align-items: center; /* Căn giữa cho đẹp */
+    min-height: auto; /* Không ép full chiều cao */
+  }
+
+  .san-list-container {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    margin-bottom: 20px;
+    padding: 16px;
+  }
+
+  .main-deals-container {
+    width: 100%;
+    margin-left: 0;
+    padding: 12px;
+  }
+
+  .title-main-deals {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .voucher-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 10px;
+  }
+}
+

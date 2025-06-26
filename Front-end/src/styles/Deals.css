@@ -1,0 +1,314 @@
+/* Deals.css */
+.san-list-container {
+    display: flex;
+    flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+    width: 25%; /* Chiếm 1/4 chiều rộng màn hình */
+    position: fixed; /* Cố định container ở bên trái */
+    top: 90px; /* Đặt container bên dưới header */
+    left: 20px; /* Căn bên trái */
+    bottom: 100px; /* Căn bên dưới */
+    background-color: #f4e9e9; /* Màu nền nhạt */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px #111111; /* Đổ bóng bên phải */
+    box-sizing: border-box; 
+  }
+
+  .san-list-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .highlight {
+    color: #28a745;
+  }
+
+  .san-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto; /* Chỉ cuộn nội dung danh sách */
+    scrollbar-width: thin; /* Làm thanh cuộn nhỏ hơn trên Firefox */
+    scrollbar-color: #ccc #f9f9f9;
+  }
+  
+  .san-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed #ddd; /* Đường gạch ngang */
+  }
+
+  .san-item:last-child {
+    border-bottom: none; /* Loại bỏ đường gạch ngang cuối cùng */
+  }
+
+  .san-logo {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    border-radius: 50%; /* Làm tròn logo */
+  }
+
+  .san-name {
+    flex: 1;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .san-count {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .san-filter-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .san-filter-container {
+    display: flex;
+    flex-wrap: nowrap; /* Không cho phép các mục xuống dòng */
+    gap: 10px; /* Khoảng cách giữa các mục */
+    margin-top: 0; /* Khoảng cách phía trên container */
+    padding: 10px; /* Khoảng cách bên trong container */
+    background-color: #e2dddd; /* Màu nền nhạt */
+    border-radius: 10px; /* Bo góc container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    white-space: nowrap; /* Đảm bảo các mục không bị xuống dòng */
+    width: 100%;
+    scrollbar-width: none;
+  }
+  
+  .scroll-btn {
+    position: absolute;
+    z-index: 1;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .scroll-btn:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .left-btn {
+    left: -20px; /* Đặt nút bên trái */
+  }
+  
+  .right-btn {
+    right: -20px; /* Đặt nút bên phải */
+  }
+  .san-filter-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+  }
+  
+  .san-filter-item:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .san-filter-item.active {
+    background-color: #6A8E5A;
+    color: white;
+    border-color: #6A8E5A;
+    box-shadow: 0 4px 8px rgba(106, 142, 90, 0.3);
+  }
+  
+  .san-filter-item.active:hover {
+    background-color: #5a7d4a;
+  }
+  
+  .san-filter-icon {
+    font-size: 20px; /* Kích thước icon */
+    margin-right: 8px; /* Khoảng cách giữa icon và label */
+  }
+  
+  .san-filter-label {
+    font-size: 14px; /* Kích thước chữ */
+    color: #333; /* Màu chữ */
+  }
+  .deals-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .main-deals-container {
+    flex: 1;
+    width: 72%;
+    margin-left: auto;
+    margin-right: 10px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 3px #111111;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* <-- Không dùng absolute */
+  }
+  
+
+  .san-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .san-button.active {
+    color: white;
+    border-color: #202521;
+  }
+  
+  .san-button:hover {
+    background-color: #f0f0f0;
+    border-color: #bbb;
+  }
+
+  .title-main-deals {
+    margin: 0px 0 0 0;
+    text-align: center;
+  }
+
+  h2 .highlight, h3 .highlight {
+    font-size: 1.2em !important;
+    font-weight: 600;
+  }
+
+  .show-more-home-btn {
+    padding: 12px 32px;
+    border: 2px solid #28a745;
+    border-radius: 24px;
+    background: #fff;
+    color: #28a745;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 auto;
+    display: inline-block;
+    transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
+    box-shadow: 0 2px 8px #28a74511;
+  }
+  .show-more-home-btn:hover {
+    background: #28a745;
+    color: #fff;
+    border-color: #28a745;
+    transform: translateY(2px) scale(1.04);
+  }
+
+
+
+@media (max-width: 768px) {
+  .san-list-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    background: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    position: static !important;
+    margin: 0 !important;
+  }
+
+  .san-list {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    width:100%;
+    
+  }
+
+  .san-item {
+    flex: 0 0 auto;
+    border-bottom: none;
+    border-right: 1px dashed #ddd;
+    margin-right: 10px;
+  }
+
+  .san-item:last-child {
+    border-right: none;
+  }
+
+  .main-deals-container {
+    width: 100%;
+    margin-left: 0;
+    padding: 15px;
+  }
+  .san-list-title {
+    font-size: 10px;
+    margin-bottom: 0px;
+  }
+  .san-button {
+  padding: 4px 8px;
+  min-height: 28px;
+  height: 32px;
+  font-size: 13px;
+  border-radius: 6px;
+  gap: 6px;
+}
+
+.san-logo {
+  width: 20px;
+  height: 20px;
+}
+
+.san-name {
+  font-size: 13px;
+}
+
+.san-count {
+  font-size: 12px;
+  margin-left: 4px;
+}
+h2.title-main-deals {
+    margin: 0px 0 0 0;
+    text-align: center;
+    font-size: 12px;
+  }
+}

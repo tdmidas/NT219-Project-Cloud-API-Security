@@ -1,0 +1,82 @@
+.chatbot-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+  
+  .chatbot-button {
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .chatbot-popup {
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    animation: slideIn 0.3s ease;
+  }
+  
+  .chatbot-header {
+    background-color: #6c63ff;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+  
+  .chatbot-frame {
+    flex: 1;
+    border: none;
+  }
+  
+  /* Slide-in animation */
+  @keyframes slideIn {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
+  @media (max-width: 480px) {
+  .chatbot-popup {
+    width: 90vw;       /* Chiều rộng gần như full màn hình trên điện thoại */
+    height: 60vh;      /* chiều cao vừa phải để không chiếm hết màn hình */
+    bottom: 80px;      /* nếu cần, tạo khoảng cách cho nút */
+    right: 5vw;
+    position: fixed;
+    border-radius: 10px;
+  }
+
+  .chatbot-button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .chatbot-widget {
+    bottom: 10px;
+    right: 10px;
+  }
+}

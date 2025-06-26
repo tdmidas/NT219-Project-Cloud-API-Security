@@ -1,0 +1,117 @@
+/* Toàn bộ vùng chatbot */
+.chatbot-container {
+  width: 100%;
+  max-width: 1100px;        /* Chatbot rộng thoáng, tối đa 1100px */
+  height: 700px;
+  margin: 20px auto;        /* Canh giữa, không dính header/footer */
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 3px solid transparent;
+  background: linear-gradient(#fff, #fff) padding-box,
+              linear-gradient(135deg, #5D54A4, #7C78B8) border-box;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.chatbot-header {
+  background: linear-gradient(135deg, #5D54A4, #7C78B8);
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Vùng tin nhắn */
+.chatbot-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f9f9fb;
+  font-size: 1.05rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Tin nhắn chung */
+.message {
+  max-width: 75%;
+  padding: 10px 15px;
+  border-radius: 12px;
+  word-wrap: break-word;
+  line-height: 1.4;
+  display: inline-block;
+}
+
+/* Tin nhắn từ người dùng */
+.message.user {
+  align-self: flex-end;
+  background-color: #e1e1f0;
+  color: #333;
+  border-radius: 18px 18px 0 18px;
+  text-align: right;
+}
+
+/* Tin nhắn từ bot */
+.message.bot,
+.message.assistant {
+  align-self: flex-start;
+  background-color: #ddddef;
+  color: #222;
+  border-radius: 18px 18px 18px 0;
+  font-style: italic;
+  text-align: left;
+}
+
+/* Footer nhập tin nhắn */
+.chatbot-input {
+  display: flex;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chatbot-input input {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  margin-right: 8px;
+}
+
+.chatbot-input input:focus {
+  border-color: #7C78B8;
+}
+
+.chatbot-input button {
+  background: #5D54A4;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.chatbot-input button:hover {
+  background: #7C78B8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .chatbot-container {
+    width: 95%;
+    height: 90vh;
+    margin: 10px auto;
+    border-radius: 15px;
+  }
+}

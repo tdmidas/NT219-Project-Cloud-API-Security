@@ -1,0 +1,88 @@
+
+/* global.css */
+/* Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Màu nền mặc định */
+body {
+  background: #f8f9fa;
+  color: #333;
+  transition: background 0.3s, color 0.3s; /* hiệu ứng chuyển màu mượt */
+}
+
+
+/* Đảm bảo toàn bộ trang chiếm đủ chiều cao */
+#root, .app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Đẩy nội dung chính mở rộng để giữ footer ở dưới cùng */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer cũ */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: white;
+  width: 100%;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 40px; /* Cách cạnh dưới 20px */
+  right: 40px; /* Cách cạnh phải 20px */
+  width: 50px;
+  height: 50px;
+  background-color: #6c757d; /* Màu nền xám */
+  color: white; /* Màu biểu tượng */
+  border: none;
+  border-radius: 8px; /* Bo góc nhẹ */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+  cursor: pointer;
+  font-size: 20px; /* Kích thước biểu tượng */
+  display: none; /* Ẩn nút mặc định */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Đảm bảo nút nằm trên các phần tử khác */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #5a6268; /* Màu nền khi hover */
+  transform: scale(1.1); /* Phóng to nhẹ khi hover */
+}
+
+
+/* CSS cho màn hình nhỏ (mobile) */
+@media (max-width: 600px) {
+  .footer {
+    padding: 15px 10px;
+    font-size: 12px;
+  }
+
+  .footer-links a {
+    margin: 0 5px;
+    font-size: 12px;
+  }
+
+  .scroll-to-top {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
